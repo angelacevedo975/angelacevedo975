@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import WhoIAm from "../components/WhoIAm";
@@ -16,6 +17,13 @@ export default function Home() {
         }}
       >
         <WhoIAm></WhoIAm>
+      </div>
+      <div
+        style={{
+          marginTop: "50px",
+        }}
+      >
+        <Footer></Footer>
       </div>
     </div>
   );
