@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: any) => ({
   text: {
     fontSize: "1.2rem",
     lineHeight: "1.5rem",
-    alignText: "justify",
+    textAlign: "justify",
     color: "#fff",
   },
 }));

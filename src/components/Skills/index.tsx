@@ -36,11 +36,12 @@ const SoftSkills = [
   "Leadership",
   "Adaptability",
   "Creativity",
-  "Organization ( in progress😄 )",
+  "Organization (in progress😄)",
   "Time Management",
   "Collaboration",
-  "Self Confidence",
-  "Self Learning",
+  "Self-Confidence",
+  "Self-Learning",
+  "Easy-Going"
 ];
 
 export default function Skills() {
@@ -48,7 +49,7 @@ export default function Skills() {
   return (
     <Container>
       <h3 className={classes.title}>
-        <span>My</span> Technical Skills
+        <span>My</span> technical skills
       </h3>
       <div className={classes.skillsContainer}>
         {TechnicalSkills.map((skill) => (
@@ -57,7 +58,7 @@ export default function Skills() {
       </div>
       <br />
       <h3 className={classes.title}>
-        My <span>Soft Skills</span>{" "}
+        My <span>soft skills</span>{" "}
       </h3>
       <div className={classes.skillsContainer}>
         {SoftSkills.map((skill) => (

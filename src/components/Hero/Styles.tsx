@@ -41,6 +41,12 @@ const useStyles = makeStyles((theme: any) => ({
       margin: "20px 0 20px 0",
     },
   },
+  socialMedia: {
+    transition: "all .3s ease-in-out !important",
+    "&:hover": {
+      transform: "scale(1.2)",
+    },
+  },
 }));
 
 export default useStyles;

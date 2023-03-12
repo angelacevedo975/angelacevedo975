@@ -27,7 +27,7 @@ export default function Navbar({ window }: { window?: () => Window }) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography color="white" variant="h6" sx={{ my: 2 }}>
         ANGEL ACEVEDO'S{" "}
         <span
           style={{
@@ -42,7 +42,9 @@ export default function Navbar({ window }: { window?: () => Window }) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item} sx={{
+                color: "white",
+              }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -103,6 +105,7 @@ export default function Navbar({ window }: { window?: () => Window }) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#262626",
             },
           }}
         >

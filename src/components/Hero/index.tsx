@@ -43,7 +43,11 @@ export default function Hero() {
         </div>
         <div className={classes.right}>
           {socialMediaLinks.map((link) => (
-            <Tooltip title={"Go to " + link.name} key={link.name}>
+            <Tooltip
+              title={"Go to " + link.name}
+              key={link.name}
+              className={classes.socialMedia}
+            >
               <IconButton
                 size="large"
                 color="primary"

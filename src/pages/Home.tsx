@@ -1,4 +1,5 @@
 import React from "react";
+import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
@@ -15,7 +16,6 @@ export default function Home() {
       </div>
       <div
         style={{
-          paddingTop: "50px",
           backgroundColor: "#262626",
           margin: "0",
         }}
@@ -30,6 +30,14 @@ export default function Home() {
         }}
       >
         <Skills></Skills>
+      </div>
+      <div
+        style={{
+          paddingTop: "50px",
+          backgroundColor: "#262626",
+        }}
+      >
+        <Experience></Experience>
       </div>
       <div
         style={{
