@@ -199,7 +199,7 @@ export default function Experience() {
         }}
       >
         {MyExperience.map((experience, i) => (
-          <TimelineItem>
+          <TimelineItem key={experience.title + i}>
             <TimelineSeparator>
               <TimelineDot
                 color="primary"
@@ -213,9 +213,9 @@ export default function Experience() {
               <h5 className={classes.experienceCompany}>
                 {experience.company} - <span>{experience.date}</span>
               </h5>
-              <p className={classes.experienceDescription}>
+              <div className={classes.experienceDescription}>
                 {experience.description}
-              </p>
+              </div>
             </TimelineContent>
           </TimelineItem>
         ))}

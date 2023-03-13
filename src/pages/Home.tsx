@@ -1,4 +1,5 @@
 import React from "react";
+import Certifications from "../components/Certifications";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
@@ -30,6 +31,14 @@ export default function Home() {
         }}
       >
         <Skills></Skills>
+      </div>
+      <div
+        style={{
+          paddingTop: "50px",
+          backgroundColor: "#262626",
+        }}
+      >
+        <Certifications></Certifications>
       </div>
       <div
         style={{

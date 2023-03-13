@@ -9,12 +9,6 @@ import Typography from "@mui/material/Typography";
 export default function MediaCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 200,  }}
-        image="https://wallpaperaccess.com/full/1217216.jpg"
-        title="green iguana"
-        component="img"
-      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
