@@ -6,13 +6,15 @@ const useStyles = makeStyles((theme: any) => ({
     fontWeight: 700,
     marginBottom: "1rem",
     color: "#fff",
-
   },
   text: {
     fontSize: "1.2rem",
     lineHeight: "1.5rem",
     textAlign: "justify",
     color: "#fff",
+    "& span": {
+      color: "rgb(255, 165, 0)",
+    },
   },
 }));
 
