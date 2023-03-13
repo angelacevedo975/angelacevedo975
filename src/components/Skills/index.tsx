@@ -48,7 +48,7 @@ export default function Skills() {
   const classes = useStyles();
   return (
     <Container>
-      <h3 className={classes.title}>
+      <h3 className={classes.title} id="mySkills">
         <span>My</span> technical skills
       </h3>
       <div className={classes.skillsContainer}>

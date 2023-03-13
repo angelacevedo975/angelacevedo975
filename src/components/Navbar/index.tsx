@@ -16,7 +16,13 @@ import { Box } from "@mui/system";
 import React from "react";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = [
+  { name: "Home", id: "home" },
+  { name: "Who am I?", id: "whoAmI" },
+  { name: "My skills", id: "mySkills" },
+  { name: "My certifications", id: "myCertifications" },
+  { name: "My experience", id: "myExperience" },
+];
 
 export default function Navbar({ window }: { window?: () => Window }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -40,17 +46,30 @@ export default function Navbar({ window }: { window?: () => Window }) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} sx={{
-                color: "white",
-              }} />
+              <ListItemText
+                onClick={() => scrollTo(item.id as any)}
+                primary={item.name}
+                sx={{
+                  color: "white",
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   );
+
+  function scrollTo(
+    to: "home" | "whoAmI" | "mySkills" | "myCertifications" | "myExperience"
+  ) {
+    const element = document.getElementById(to);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -84,8 +103,12 @@ export default function Navbar({ window }: { window?: () => Window }) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+              <Button
+                key={item.name}
+                sx={{ color: "#fff" }}
+                onClick={() => scrollTo(item.id as any)}
+              >
+                {item.name}
               </Button>
             ))}
           </Box>

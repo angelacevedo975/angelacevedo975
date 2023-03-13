@@ -9,7 +9,7 @@ export function Projects() {
   return (
     <div className={classes.root}>
       <Container>
-        <h3 className={classes.title}>
+        <h3 className={classes.title} id="projects">
           My{" "}
           <span
             style={{

@@ -37,7 +37,9 @@ export default function WhoIAm() {
 
   return (
     <Container>
-      <h3 className={classes.title}>Who am I</h3>
+      <h3 className={classes.title} id="whoAmI">
+        Who am I
+      </h3>
       {paragraphs.map((paragraph, i) => (
         <React.Fragment key={"parah-" + i}>
           {paragraph}

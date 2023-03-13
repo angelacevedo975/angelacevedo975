@@ -31,7 +31,7 @@ const socialMediaLinks = [
 export default function Hero() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="home">
       <Container className={classes.container}>
         <div className={classes.left}>
           <h1 className={classes.title}>

@@ -66,7 +66,7 @@ export default function Certifications() {
   const classes = useStyles();
   return (
     <Container>
-      <h3 className={classes.title}>
+      <h3 className={classes.title} id="myCertifications">
         My <span>certifications</span>
       </h3>
       <div className={classes.certificationsContainer}>

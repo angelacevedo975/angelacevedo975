@@ -215,7 +215,11 @@ export default function Experience() {
           </React.Fragment>
         }
       ></BasicModal>
-      <h3 className={classes.title} onClick={() => setOpen(true)}>
+      <h3
+        className={classes.title}
+        onClick={() => setOpen(true)}
+        id="myExperience"
+      >
         My <span>experience</span>
       </h3>
       <Timeline
