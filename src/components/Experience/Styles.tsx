@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme: any) => ({
   },
   li: {
     padding: "10px",
-    borderBottom: "1px solid #ccc",
+    borderBottom: "1px solid rgb(255, 165, 0)",
     textAlign: "justify",
     "&:last-child": {
       borderBottom: "none",

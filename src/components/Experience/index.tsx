@@ -7,9 +7,18 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import React from "react";
 import useStyles from "./Styles";
+import BasicModal from "../BasicModal";
+import { Button } from "@mui/material";
 
 export default function Experience() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const [currentExperience, setCurrentExperience] = React.useState<{
+    title: string;
+    company: string;
+    date: string;
+    description: JSX.Element;
+  } | null>(null);
 
   const MyExperience = [
     {
@@ -187,7 +196,26 @@ export default function Experience() {
 
   return (
     <Container>
-      <h3 className={classes.title}>
+      <BasicModal
+        open={open}
+        setOpen={setOpen}
+        title="My Experience"
+        content={
+          <React.Fragment>
+            <h4 className={classes.experienceTitle}>
+              {currentExperience?.title}
+            </h4>
+            <h5 className={classes.experienceCompany}>
+              {currentExperience?.company} -{" "}
+              <span>{currentExperience?.date}</span>
+            </h5>
+            <div className={classes.experienceDescription}>
+              {currentExperience?.description}
+            </div>
+          </React.Fragment>
+        }
+      ></BasicModal>
+      <h3 className={classes.title} onClick={() => setOpen(true)}>
         My <span>experience</span>
       </h3>
       <Timeline
@@ -214,7 +242,16 @@ export default function Experience() {
                 {experience.company} - <span>{experience.date}</span>
               </h5>
               <div className={classes.experienceDescription}>
-                {experience.description}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => {
+                    setCurrentExperience(experience);
+                    setOpen(true);
+                  }}
+                >
+                  See more
+                </Button>
               </div>
             </TimelineContent>
           </TimelineItem>
